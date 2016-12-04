@@ -18,7 +18,19 @@ class m161105_094909_create_teachers_table extends Migration
             'surname' => $this->string(25),
             'department_id' => $this->integer(),
         ]);
+        
+        $this->addForeignKey('fk-teacher-department_id',
+            'teachers',
+            'department_id',
+            'departments',
+            'id',
+            'CASCADE'
+        );
+
     }
+
+
+
 
     /**
      * @inheritdoc

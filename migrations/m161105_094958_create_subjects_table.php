@@ -17,8 +17,18 @@ class m161105_094958_create_subjects_table extends Migration
             'name' => $this->string(25),
             'department_id' => $this->integer(),
         ]);
+   
+        $this->addForeignKey('fk-subject-department_id',
+            'subjects',
+            'department_id',
+            'departments',
+            'id',
+            'CASCADE'
+        );
+
     }
 
+   
     /**
      * @inheritdoc
      */

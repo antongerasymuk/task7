@@ -17,7 +17,18 @@ class m161105_095157_create_homeworks_table extends Migration
             'name' => $this->string(25),
             'subject_id' => $this->integer(),
         ]);
+       
+        $this->addForeignKey('fk-homeworks-subject_id',
+            'homeworks',
+            'subject_id',
+            'subjects',
+            'id',
+            'CASCADE'
+        );
+
     }
+
+   
 
     /**
      * @inheritdoc

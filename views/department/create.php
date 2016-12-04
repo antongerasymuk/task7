@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			'pluginOptions' => [
 			'allowClear' => true
 			],
-			])->label('Category');
+			])->label('University');
 		?>
 
 		<div class="form-group">

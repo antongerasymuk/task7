@@ -20,7 +20,17 @@ class m161105_094846_create_students_table extends Migration
             'telephone' => $this->string(10),
             'department_id' => $this->integer(),           
         ]);
+
+        $this->addForeignKey('fk-student-department_id',
+            'students',
+            'department_id',
+            'departments',
+            'id',
+            'CASCADE'
+        );
+
     }
+    
 
     /**
      * @inheritdoc
