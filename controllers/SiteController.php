@@ -8,6 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use vova07\console\ConsoleRunner;
 
 class SiteController extends Controller
 {
@@ -90,5 +91,14 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    public function actionMigrateUp()
+    {
+     
+      $cr = new ConsoleRunner(['file' => '@app/vendor/yiisoft/yii2/console']);
+      if ($cr->run('migrate/up')) {
+        echo "Migration compited!";
+      }
     }
 }

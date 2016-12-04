@@ -30,7 +30,17 @@ AppAsset::register($this);
 
 <div class="wrap">
    
-    <div class="container">
+    <div class="container" >
+    <a class="btn btn-default" href="/university/">Universities</a>
+    <a class="btn btn-default" href="/department/">Departments</a>
+    <a class="btn btn-default" href="/homework/">Homework</a>
+    <a class="btn btn-default" href="/subject/">Subject</a>
+    <a class="btn btn-default" href="/teacher/">Teacher</a>
+    <a class="btn btn-default" href="/student/">Student</a>
+    <a class="btn btn-default" href="/site/migrate-up/">MakeDB</a>
+    <p></p>
+    
+
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
